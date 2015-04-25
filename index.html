@@ -27,12 +27,13 @@ Chromecastをリモート端末と見なしてWebRTCで映像を送信できな�
 上手くいかなかったという話。</p>
 
 <p>Chromecastにはカメラ(とマイク)がないので、
-MacからChromecastへ一方向のStreamを想定していた。</p>
+MacからChromecastへ一方向のStreamを想定していた。
+WebRTCのライブラリは<a href="http://nttcom.github.io/skyway/">SkyWay</a>を使った。</p>
 
 <p><a href="https://chrome.google.com/webstore/detail/google-cast/boadgeojelhgndaghljhdicfkmllpafd">Google Cast</a>というextention(機能拡張)をインストールしたChromeで、
-<a href="http://youkinjoh.github.io/WebRTC-with-Chromecast/src/sender.html">sender</a>を開き、
+<a href="https://youkinjoh.github.io/WebRTC-with-Chromecast/src/sender.html">sender</a>を開き、
 <code>connect cast</code>ボタンをクリックすると、
-Chromecastが<a href="http://youkinjoh.github.io/WebRTC-with-Chromecast/src/receiver.html">receiver</a>を開く。
+Chromecastが<a href="https://youkinjoh.github.io/WebRTC-with-Chromecast/src/receiver.html">receiver</a>を開く。
 その後に<code>call</code>をクリックするとストリームが始まるはずだったんだけど、
 <code>Failed to set remote offer sdp: Session error code: ERROR_CONTENT. Session error description: Failed to set data send codecs.</code>というエラーが発生。</p>
 
