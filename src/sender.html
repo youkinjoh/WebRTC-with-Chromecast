@@ -152,7 +152,7 @@ function initializePeer(callback) {
 function initializeMedia(callback) {
   log('initializeMedia');
   navigator.getUserMedia(
-    {audio: true, video: true},
+    {audio: false, video: {mandatory:{googLeakyBucket: true}}},
     function(stream) {
       log('getUserMedia event:success');
       localStream = stream;
